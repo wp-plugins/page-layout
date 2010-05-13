@@ -3,7 +3,7 @@ Contributors: Luca Realdi
 Tags: page, layout, cms, widget
 Requires at least: 2.9.2
 Tested up to: 3.0 beta
-Stable tag: 0.1.1
+Stable tag: 0.2
 
 Page Layout allows to define a page layout using widgets.
 
@@ -65,7 +65,7 @@ foreach ($zones as $zone){
 
 == Changelog ==
 
-= 0.1.1 =
+= 0.2 =
 
 * Fix widget.js (a fake of wp widget.js)
 
