@@ -188,7 +188,7 @@ wpWidgets = {
 	save : function(widget, del, animate, order) {
 		// inside the page <form>, the widget <form> don't work...
 		//var sb = widget.closest('div.widgets-sortables').attr('id'), data = widget.find('form').serialize(), a;
-		var sb = widget.closest('div.widgets-sortables').attr('id'), data = widget.find('input').serialize(), a;
+		var sb = widget.closest('div.widgets-sortables').attr('id'), data = widget.find('input, select, textarea').serialize(), a;
 		widget = $(widget);
 		$('.ajax-feedback', widget).css('visibility', 'visible');
 
