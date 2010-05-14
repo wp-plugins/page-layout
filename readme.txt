@@ -75,7 +75,7 @@ foreach ($zones as $zone){
 
 == Screenshots ==
 
-1. The post meta box Page Layout
+See http://keceloce.net/wordpress-page-layout/
 
 
 == Other Notes ==

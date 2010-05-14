@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: PageLayout
-Plugin URI: http://keceloce.net/
+Plugin URI: http://keceloce.net/wordpress-page-layout/
 Description: PageLayout permette di modificare il layout delle pagine di WordPress
 Version: 0.2
 Author: Luca Realdi
