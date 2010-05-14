@@ -67,7 +67,7 @@ foreach ($zones as $zone){
 
 = 0.2 =
 
-* Fix widget.js (a fake of wp widget.js)
+* Fix widget.js (a fork of wp widget.js)
 
 = 0.1 =
 
