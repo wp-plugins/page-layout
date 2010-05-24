@@ -1,9 +1,9 @@
 === Page Layout ===
 Contributors: Luca Realdi
-Tags: page, layout, cms, widget
+Tags: page, layout, cms, widget, widgets
 Requires at least: 2.9.2
 Tested up to: 3.0 beta
-Stable tag: 0.2
+Stable tag: 0.3
 
 Page Layout allows to define a page layout using widgets.
 
@@ -64,6 +64,10 @@ foreach ($zones as $zone){
 
 
 == Changelog ==
+
+= 0.3 =
+
+* Fix child theme bugs (thanks to Lukasz Muchlado lukasz[at]bapro[dot]pl)
 
 = 0.2 =
 

@@ -196,7 +196,7 @@ if ( !class_exists('PageLayout') ) {
 
 			$is_template = false;
 
-			if (is_file(get_template_directory().'/layouts/'.$args['template'].'.php')) $is_template = true;
+			if (is_file(get_stylesheet_directory().'/layouts/'.$args['template'].'.php')) $is_template = true;
 			if (is_file(WP_PLUGIN_DIR.'/'.BAOL_PL_BASEFOLDER.'/layouts/'.$args['template'].'.php')) $is_template = true;
 			
 			if ($is_template == false) 
@@ -235,7 +235,7 @@ if ( !class_exists('PageLayout') ) {
 			wp_nonce_field( 'pagelayout_nonce', '_pagelayout_nonce', false, true );?>	
 			<div id="baol_spinner" class="hide">Loading...</div>
 			<div id="baol_layout-message">
-			<?php if ( $this->current_layout['tmp'] ):?>
+			<?php if ( !empty($this->current_layout['tmp']) ):?>
 				 <p class='message'><?php _e( "There's a layout not saved for this page.", BAOL_PL_TEXTDOMAIN );?></p>
 			<?php endif;?>	
 			</div>
@@ -441,14 +441,14 @@ if ( !class_exists('PageLayout') ) {
 				$output = get_the_password_form();
 				return $output;
 			}
-			if ( is_page() && ($post->layout) ) {
+			if ( is_page() && !empty($post->layout) ) {
 				$layout_id = $post->layout['layout_id'];
 				$template = $this->registered_layouts[$layout_id]['template'];
 				
 				if (is_file(WP_PLUGIN_DIR.'/'.BAOL_PL_BASEFOLDER.'/layouts/'.$template.'.php')) 
 					$file_template = WP_PLUGIN_DIR.'/'.BAOL_PL_BASEFOLDER.'/layouts/'.$template.'.php';					
-				if (is_file(get_template_directory().'/layouts/'.$template.'.php'))
-					$file_template = get_template_directory().'/layouts/'.$template.'.php';
+				if (is_file(get_stylesheet_directory().'/layouts/'.$template.'.php'))
+					$file_template = get_stylesheet_directory().'/layouts/'.$template.'.php';
 				
 				if (is_file(WP_PLUGIN_DIR.'/'.BAOL_PL_BASEFOLDER.'/css/page-layout-general.css'))
 					$general_css = WP_PLUGIN_URL.'/'.BAOL_PL_BASEFOLDER.'/css/page-layout-general.css';
